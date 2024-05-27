@@ -24,7 +24,7 @@ const logoFont = computed(() => {
 </script>
 
 <template>
-  <nav class="navbar">
+  <nav class="navbar mb-5">
     <div class="container-fluid">
       <router-link class="navbar-brand fs-3" :class="logoFont" to="/">Inconsisten.cy</router-link>
     </div>
