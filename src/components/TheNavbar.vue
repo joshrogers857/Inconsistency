@@ -5,8 +5,6 @@ import { useRoute, RouterLink } from 'vue-router';
 const route = useRoute();
 
 const logoFont = computed(() => {
-  console.log(route.query['id']?.slice(0, 2));
-
   switch (Number(route.query['id']?.slice(0, 2))) {
     case 1:
       return 'nabla-regular';
