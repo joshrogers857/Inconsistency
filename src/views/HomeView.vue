@@ -8,7 +8,7 @@ import TheQuoteCard from '@/components/cards/TheQuoteCard.vue';
       <TheQuoteCard></TheQuoteCard>
     </div>
     <div class="col d-flex justify-content-center align-items-center">
-      <h1>Image</h1>
+      <h1>Number</h1>
     </div>
   </div>
 </template>

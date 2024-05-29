@@ -1,25 +1,46 @@
-/* eslint-env node */
-require('@rushstack/eslint-patch/modern-module-resolution');
-
 module.exports = {
-  root: true,
-  'extends': [
-    'plugin:vue/vue3-essential',
-    'eslint:recommended',
-    '@vue/eslint-config-typescript',
-    '@vue/eslint-config-prettier/skip-formatting',
-  ],
-  plugins: [
-    '@stylistic',
-  ],
-  parserOptions: {
-    ecmaVersion: 'latest',
+  'env': {
+    'browser': true,
+    'es2021': true,
   },
-  rules: {
-    '@typescript-eslint/semi': [2, 'always'],
-    '@typescript-eslint/comma-dangle': [2, 'always-multiline'],
-    '@stylistic/eol-last': ["error", "always"],
-    '@stylistic/no-trailing-spaces': "error",
-    '@stylistic/no-multiple-empty-lines': ["error", { "max": 1, "maxEOF": 0 }],
+  'extends': [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:vue/vue3-essential',
+  ],
+  'overrides': [
+    {
+      'env': {
+        'node': true,
+      },
+      'files': [
+        '.eslintrc.{js,cjs}',
+      ],
+      'parserOptions': {
+        'sourceType': 'script',
+      },
+    },
+  ],
+  'parserOptions': {
+    'ecmaVersion': 'latest',
+    'parser': '@typescript-eslint/parser',
+    'sourceType': 'module',
+  },
+  'plugins': [
+    '@typescript-eslint',
+    'vue',
+  ],
+  'rules': {
+    'no-unused-vars': 'error',
+    'indent': ['error', 2],
+    'linebreak-style': ['error', 'unix'],
+    'quotes': ['error', 'single'],
+    'semi': ['error', 'always'],
+    'comma-dangle': ['error', 'always-multiline'],
+    'eol-last': ['error', 'always'],
+    'no-trailing-spaces': 'error',
+    'no-multiple-empty-lines': ['error', { 'max': 1, 'maxEOF': 0 }],
+    'max-len': ['error', { 'code': 80 }],
+    'object-curly-spacing': ['error', 'always'],
   },
 };
