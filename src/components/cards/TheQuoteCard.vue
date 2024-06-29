@@ -15,7 +15,7 @@ const author = computed(() => quote.value.author ?? DEFAULT_AUTHOR.value);
 </script>
 
 <template>
-  <BaseCard :header="cardHeader">
+  <BaseCard id="quote" :header="cardHeader">
     <blockquote class="blockquote mb-0">
       <p>{{ body }}</p>
       <footer class="blockquote-footer">
